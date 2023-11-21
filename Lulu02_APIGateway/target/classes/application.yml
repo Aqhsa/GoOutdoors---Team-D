@@ -1,0 +1,91 @@
+server:
+
+  port: 8999
+
+ 
+
+eureka:
+
+  instance:
+
+    hostname: localhost  
+
+ 
+
+spring:
+
+  application:
+
+    name: Gateway_API_Service
+
+    
+
+  cloud:
+
+    gateway:
+
+      routes:
+      
+         - id: SignUp-Service
+
+           uri: lb://SignUp-Service
+
+           predicates:
+
+            - Path=/api1/**
+            
+            
+         - id: Returns-Service
+
+           uri: lb://Returns-Service
+
+           predicates:
+
+            - Path=/return/**
+            
+         - id: OrderManagement-Service
+
+           uri: lb://OrderManagement-Service
+
+           predicates:
+
+            - Path=/api2/order/**
+            
+         - id: OrderManagement-Service-Service
+
+           uri: lb://OrderManagement-Service
+
+           predicates:
+
+            - Path=/api2/payment/**
+            
+         - id: OrderManagement-Service-Service
+
+           uri: lb://OrderManagement-Service
+
+           predicates:
+
+            - Path=/api2/shipping/**
+            
+         - id: Product-Service
+
+           uri: lb://Product-Service
+
+           predicates:
+
+            - Path=/api3/product/**
+            
+         - id: Product-Service
+
+           uri: lb://Product-Service
+
+           predicates:
+
+            - Path=/api3/inventory/**
+           
+         - id: Promotion-Service
+           uri: lb://Promotion-Service
+
+           predicates:
+
+            - Path=/promo1/**
