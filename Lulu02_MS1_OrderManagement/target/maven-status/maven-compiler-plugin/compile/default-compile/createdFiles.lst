@@ -1,0 +1,10 @@
+com/orders/management/entity/OrdersEntity.class
+com/orders/management/entity/ShippingsEntity.class
+com/orders/management/repository/PaymentsRepo.class
+com/orders/management/controller/PaymentsController.class
+com/orders/management/OrdersmanagementApplication.class
+com/orders/management/entity/PaymentsEntity.class
+com/orders/management/repository/OrdersRepo.class
+com/orders/management/controller/OrdersController.class
+com/orders/management/repository/ShippingsRepo.class
+com/orders/management/controller/ShippingsController.class
